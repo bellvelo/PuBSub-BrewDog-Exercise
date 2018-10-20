@@ -1,14 +1,50 @@
+body {
+  background-image: url('../images/brewdog4.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* font-family: 'Architects Daughter', cursive;
+font-family: 'Changa', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Graduate', cursive; */
+
 #header {
+  font-family: 'Graduate', cursive;
+  color: navy;
+  font-weight: bold;
+  font-size: 25px;
+  width: 100%;
   background-color: cadetblue;
   text-align: center;
-  align-items: center;;
+  align-items: center;
   padding: 10px;
+  background-image: url('../images/brewdog5.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  align-items: center;
+  font-family: 'Changa', sans-serif;
+
 }
 
 #dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: orange;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
+  font-family: 'Changa', sans-serif;
+  font-size: 25px;
+  color: white;
 }
 
 #beer-select {
@@ -22,32 +58,43 @@
 .beer-wrapper {
   display: flex;
   flex-wrap: flex;
-  margin: 10px 0 10px 0;
+  margin: 3px 0 2px 0;
   height: auto;
 }
 .beer-image {
   display: flex;
-  flex: 30%;
+  justify-content: center;
+  flex: 15%;
   background-color: #f1f1f1;
   margin: 10px 5px 10px 10px;
   border: 1px solid black;
-  padding: 15px 15px 15px 86px;
-  height: 400px;
+  padding: 15px 15px 15px 15px;
+  /* height: 400px; */
   align-items: center;
+  background-image: url('../images/brewdog5.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 .beer-info {
-
-  flex: 70%;
-  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  flex: 85%;
+  /* background-color: #f1f1f1; */
   margin: 10px 10px 10px 5px;
   border: 1px solid black;
-  height: 400px;
+  /* height: 400px; */
   padding: 25px;
+  background-image: url('../images/white.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image;
+  border-radius: 15px;
 }
 
 .name {
-  font-family: helvetica;
+  font-family: 'Graduate', cursive;
   color: dodgerblue;
 }
 
@@ -57,7 +104,7 @@
 }
 
 .tagline {
-  font-family: arial;
+  font-family: 'Changa', sans-serif;
   color: purple;
   font-style: italic;
 }
@@ -65,8 +112,10 @@
 .food {
   font-size: 18px;
   color: maroon;
+  font-family: 'Shadows Into Light Two', cursive;
 }
 
 .description {
   font-size: 20px;
+  font-family: 'Architects Daughter', cursive;
 }
