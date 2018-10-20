@@ -1,0 +1,72 @@
+#header {
+  background-color: cadetblue;
+  text-align: center;
+  align-items: center;;
+  padding: 10px;
+}
+
+#dropdown {
+  background-color: orange;
+  align-items: center;
+  padding: 5px;
+}
+
+#beer-select {
+  align-items: center;
+}
+.image {
+  height: 350px;
+  width: auto;
+  align-items: center;
+}
+.beer-wrapper {
+  display: flex;
+  flex-wrap: flex;
+  margin: 10px 0 10px 0;
+  height: auto;
+}
+.beer-image {
+  display: flex;
+  flex: 30%;
+  background-color: #f1f1f1;
+  margin: 10px 5px 10px 10px;
+  border: 1px solid black;
+  padding: 15px 15px 15px 86px;
+  height: 400px;
+  align-items: center;
+}
+
+.beer-info {
+
+  flex: 70%;
+  background-color: #f1f1f1;
+  margin: 10px 10px 10px 5px;
+  border: 1px solid black;
+  height: 400px;
+  padding: 25px;
+}
+
+.name {
+  font-family: helvetica;
+  color: dodgerblue;
+}
+
+.abv {
+  font-family: verdana;
+  color: orange;
+}
+
+.tagline {
+  font-family: arial;
+  color: purple;
+  font-style: italic;
+}
+
+.food {
+  font-size: 18px;
+  color: maroon;
+}
+
+.description {
+  font-size: 20px;
+}
