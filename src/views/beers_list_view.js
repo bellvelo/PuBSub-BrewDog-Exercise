@@ -22,15 +22,14 @@ BeersListView.prototype.clearList = function () {
 BeersListView.prototype.renderBeerDetailView = function (beers) {
   beers.forEach((beer) => {
     const beerItem = this.createBeerListItem(beer);
-    console.log("this", this);
+    // console.log("this", this);
     this.container.appendChild(beerItem)
-    console.log('beerItem:', beerItem); // HTML element for individual beer
+    // console.log('beerItem:', beerItem); // HTML element for individual beer
   })
 };
 BeersListView.prototype.createBeerListItem = function (beer) {
   const beerDetailView = new BeerDetailView();
   const beerDetail = beerDetailView.createBeerDetail(beer);
-  // debugger;
   return beerDetail;
   console.log('beerDetail:', beerDetail); // HTML element for individual beer
 };

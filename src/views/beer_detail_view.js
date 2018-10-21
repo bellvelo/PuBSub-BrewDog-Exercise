@@ -16,10 +16,9 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   beerImage.classList.add('image');
   beerImageDiv.appendChild(beerImage);
 ///////////////////////////////////////////////////////////////////////////////
-
   const beerTextDiv = document.createElement('div')
   beerTextDiv.classList.add('beer-info');
-
+///////////////////////////////////////////////////////////////////////////////
   const beerNameDiv = document.createElement('div')
   beerNameDiv.classList.add('beer-name');
   beerTextDiv.appendChild(beerNameDiv)
@@ -44,7 +43,7 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   beerTextDiv.appendChild(beerAbvDiv)
 
   const beerAbv = document.createElement('h3')
-  beerAbv.textContent = `${beer.abv}%`;
+  beerAbv.textContent = `ABV: ${beer.abv}%`;
   beerAbv.classList.add('abv');
   beerAbvDiv.appendChild(beerAbv);
 ///
@@ -53,7 +52,7 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   beerTextDiv.appendChild(beerDescriptionDiv)
 
   const beerDescription = document.createElement('h3')
-  beerDescription.textContent = beer.description;
+  beerDescription.textContent = `TASTING NOTES: ${beer.description}`;
   beerDescription.classList.add('description');
   beerDescriptionDiv.appendChild(beerDescription);
 ///
@@ -62,7 +61,7 @@ BeerDetailView.prototype.createBeerDetail = function (beer) {
   beerTextDiv.appendChild(beerFoodDiv)
 
   const BeerFood = document.createElement('h3')
-  BeerFood.textContent = `Eatings not cheating with: ${beer.food_pairing}`;
+  BeerFood.textContent = `EATINGS NOT CHEATING: ${beer.food_pairing}`;
   BeerFood.classList.add('food');
   beerFoodDiv.appendChild(BeerFood);
 ///

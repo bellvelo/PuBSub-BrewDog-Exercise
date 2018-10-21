@@ -1,7 +1,13 @@
 body {
-  background-image: url('../images/brewdog4.jpeg');
+  background-image: url('../images/brewdog16.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 10px 10px;
+}
+
+a {
+  text-decoration: none;
+  font-family: arial;
 }
 
 /* font-family: 'Architects Daughter', cursive;
@@ -11,19 +17,34 @@ font-family: 'Graduate', cursive; */
 
 #header {
   font-family: 'Graduate', cursive;
-  color: navy;
+  color: maroon;
   font-weight: bold;
   font-size: 25px;
-  width: 100%;
-  background-color: cadetblue;
+  width: auto;
   text-align: center;
   align-items: center;
   padding: 10px;
   background-image: url('../images/brewdog5.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  border: 5px orange solid;
+  /* margin: 5px; */
 }
 
+#dropdown {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Changa', sans-serif;
+  font-size: 25px;
+  color: white;
+  /* border: 3px orange double; */
+  /* margin: 5px; */
+}
 #footer {
   width: 100%;
   background-color: orange;
@@ -32,23 +53,16 @@ font-family: 'Graduate', cursive; */
   text-align: center;
   align-items: center;
   font-family: 'Changa', sans-serif;
-
 }
-
-#dropdown {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: orange;
-  align-items: center;
-  padding: 10px;
-  font-family: 'Changa', sans-serif;
-  font-size: 25px;
-  color: white;
+#beer-list {
+  /* display:flex; */
+  /* justify-content: center; */
 }
-
 #beer-select {
   align-items: center;
+  justify-content: center;
+  font-family: 'Changa', sans-serif;
+  font-size: 12px;
 }
 .image {
   height: 350px;
@@ -58,29 +72,30 @@ font-family: 'Graduate', cursive; */
 .beer-wrapper {
   display: flex;
   flex-wrap: flex;
-  margin: 3px 0 2px 0;
+  margin: 3px 10px 3px 10px;
   height: auto;
 }
 .beer-image {
   display: flex;
   justify-content: center;
-  flex: 15%;
+  flex: 25%;
   background-color: #f1f1f1;
   margin: 10px 5px 10px 10px;
   border: 1px solid black;
-  padding: 15px 15px 15px 15px;
+  padding: 15px;
   /* height: 400px; */
   align-items: center;
   background-image: url('../images/brewdog5.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
+  border: 3px orange solid;
 }
 
 .beer-info {
   display: flex;
   flex-direction: column;
-  flex: 85%;
+  flex: 75%;
   /* background-color: #f1f1f1; */
   margin: 10px 10px 10px 5px;
   border: 1px solid black;
@@ -89,8 +104,8 @@ font-family: 'Graduate', cursive; */
   background-image: url('../images/white.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-image;
   border-radius: 15px;
+  border: 3px orange solid;
 }
 
 .name {
@@ -99,7 +114,7 @@ font-family: 'Graduate', cursive; */
 }
 
 .abv {
-  font-family: verdana;
+  font-family: 'Graduate', cursive;
   color: orange;
 }
 
@@ -110,7 +125,7 @@ font-family: 'Graduate', cursive; */
 }
 
 .food {
-  font-size: 18px;
+  font-size: 20px;
   color: maroon;
   font-family: 'Shadows Into Light Two', cursive;
 }

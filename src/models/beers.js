@@ -4,14 +4,14 @@ const PubSub = require('../helpers/pub_sub.js');
 const Beers = function(){
   this.beersData = [];
   this.names = [];
+
 }
 /// SUBS FROM SELECT VIEW AND TRIGGERS METHOD TO RETURN BEER OBJECT ///
 Beers.prototype.bindEvents = function () {
   PubSub.subscribe('SelectView:change', (event) => {
     const nameIndex = event.detail; // Index number
-    this.publishBeerByName(nameIndex);
-    console.log('this', this); // array of objects & array of names.
-  })
+    this.publishBeerByName(nameIndex); // console.log('this', this); // array of objects & array of names.
+    })
 };
 
 /// PULLS IN API DATA THEN CALLS METHOD TO COMPILE ARRAY OF NAMES ///
@@ -52,5 +52,6 @@ Beers.prototype.publishBeerByName = function (nameIndex) {
   PubSub.publish('Beers:beers-loaded', foundBeer);
   console.log('found beer', foundBeer); // beer object
 };
+
 
 module.exports = Beers;

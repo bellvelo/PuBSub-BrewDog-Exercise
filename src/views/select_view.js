@@ -2,6 +2,7 @@ const PubSub = require('../helpers/pub_sub');
 
 const SelectView = function(selectElement) {
   this.selectElement = selectElement;
+  console.log(selectElement);
 };
 
 /// SUBS TO MODEL AND POPULATES DROPDOWN WITH NAMES ///
@@ -17,6 +18,7 @@ this.selectElement.addEventListener('change', (event) => {
   console.log(selectedIndex); // index number
   PubSub.publish('SelectView:change', selectedIndex);
 })
+
 };
 
 ///////  DROPDOWN POPULATE SECTION  ////////

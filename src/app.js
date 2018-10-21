@@ -16,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const beers = new Beers();
   beers.bindEvents();
   beers.getData();
+
 })
