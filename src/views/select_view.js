@@ -12,13 +12,12 @@ SelectView.prototype.bindEvents = function () {
     this.populateSelect(event.detail);
   });
 
-/// CHANGE LISTENER - REACTS TO DROPDOWN SELECTION ///
-this.selectElement.addEventListener('change', (event) => {
-  const selectedIndex = event.target.value;
-  console.log(selectedIndex); // index number
-  PubSub.publish('SelectView:change', selectedIndex);
-})
-
+  /// CHANGE LISTENER - REACTS TO DROPDOWN SELECTION ///
+  this.selectElement.addEventListener('change', (event) => {
+    const selectedIndex = event.target.value;
+    console.log(selectedIndex); // index number
+    PubSub.publish('SelectView:change', selectedIndex);
+  })
 };
 
 ///////  DROPDOWN POPULATE SECTION  ////////

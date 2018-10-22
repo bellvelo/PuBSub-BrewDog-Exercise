@@ -4,7 +4,6 @@ const PubSub = require('../helpers/pub_sub.js');
 const Beers = function(){
   this.beersData = [];
   this.names = [];
-
 }
 /// SUBS FROM SELECT VIEW AND TRIGGERS METHOD TO RETURN BEER OBJECT ///
 Beers.prototype.bindEvents = function () {
@@ -12,9 +11,24 @@ Beers.prototype.bindEvents = function () {
     const nameIndex = event.detail; // Index number
     this.publishBeerByName(nameIndex); // console.log('this', this); // array of objects & array of names.
     })
+  PubSub.subscribe('SelectView:random', (event) => {
+    const randomBeer = event.detail;
+    console.log('random index', event.detail);
+    this.publishRandomBeer(randomBeer);
+  })
 };
 
-/// PULLS IN API DATA THEN CALLS METHOD TO COMPILE ARRAY OF NAMES ///
+///METHOD TO CALL THE RANDOM BEER API ///
+Beers.prototype.getRandomData = function () {
+  const url = "https://api.punkapi.com/v2/beers/random";
+  const request = new Request(url);
+  request.get().then(randomData => {
+    PubSub.publish('Beers:beers-loaded', randomData)
+    console.log('randomdata', randomData); //single beer object
+  });
+};
+
+// / PULLS IN API DATA THEN CALLS METHOD TO COMPILE ARRAY OF NAMES ///
 Beers.prototype.getData = function () {
   const url = "https://api.punkapi.com/v2/beers";
   const request = new Request(url);
@@ -52,6 +66,5 @@ Beers.prototype.publishBeerByName = function (nameIndex) {
   PubSub.publish('Beers:beers-loaded', foundBeer);
   console.log('found beer', foundBeer); // beer object
 };
-
 
 module.exports = Beers;

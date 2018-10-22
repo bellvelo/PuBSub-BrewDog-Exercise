@@ -13,8 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const beersListView = new BeersListView(beersListContainer);
   beersListView.bindEvents();
 
+  const beerRandomContainer = document.querySelector('#random');
+
   const beers = new Beers();
   beers.bindEvents();
   beers.getData();
+
+  beerRandomContainer.addEventListener('click', (event) => {
+    beers.getRandomData();
+
+  })
+
+
 
 })
