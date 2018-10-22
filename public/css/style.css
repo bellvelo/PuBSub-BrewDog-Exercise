@@ -10,11 +10,6 @@ a {
   font-family: arial;
 }
 
-/* font-family: 'Architects Daughter', cursive;
-font-family: 'Changa', sans-serif;
-font-family: 'Shadows Into Light Two', cursive;
-font-family: 'Graduate', cursive; */
-
 #header {
   font-family: 'Graduate', cursive;
   color: maroon;
@@ -31,19 +26,27 @@ font-family: 'Graduate', cursive; */
   /* margin: 5px; */
 }
 
-#dropdown {
+#selectors {
   width: auto;
   display: flex;
-  justify-content: center;
+  /* justify-content: space-around; */
   background-color: orange;
   align-items: center;
   text-align: center;
   padding: 10px;
   font-family: 'Changa', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   /* border: 3px orange double; */
   /* margin: 5px; */
+}
+
+#random {
+  background-color: dodgerblue;
+  color: white;
+  font-family: 'Changa', sans-serif;
+  font-size: 15px;
+  border-radius: 10px;
 }
 #footer {
   width: 100%;
@@ -63,6 +66,22 @@ font-family: 'Graduate', cursive; */
   justify-content: center;
   font-family: 'Changa', sans-serif;
   font-size: 12px;
+}
+
+#selectors {
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: row;
+}
+#dropdown {
+  display: flex;
+  justify-content: center;
+  flex: 50%;
+}
+#random-button {
+  display: flex;
+  justify-content: center;
+  flex: 50%;
 }
 .image {
   height: 350px;
